@@ -45,6 +45,11 @@ pydantic-settings = "^2.9.0"
 requests = "^2.32"
 wikipedia-api = {version = "^0.8.1", optional = true}
 
+[tool.poetry]
+packages = [
+  { include = "beeai_framework" }
+]
+
 [tool.poetry.group.dev.dependencies]
 commitizen = "^4.2.1"
 mypy = "^1.15.0"
