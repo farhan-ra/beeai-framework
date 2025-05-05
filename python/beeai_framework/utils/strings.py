@@ -19,7 +19,8 @@ import string
 from collections.abc import Sequence
 from enum import StrEnum
 from typing import Any, cast
-
+import datetime
+import decimal
 
 def trim_left_spaces(value: str) -> str:
     """Remove all whitespace from the left side of the string."""
@@ -48,6 +49,8 @@ def create_strenum(name: str, keys: Sequence[str]) -> type[StrEnum]:
 def json_default(value):
     if isinstance(value, datetime.date):
         return dict(year=value.year, month=value.month, day=value.day)
+    elif isinstance(value, decimal.Decimal):
+        return float(value).__dict__
     else:
         return value.__dict__
     
