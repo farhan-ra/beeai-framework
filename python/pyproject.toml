@@ -1,6 +1,6 @@
 [project]
 name = "beeai-framework-patched-fr"
-version="0.1.20"
+version="0.1.21"
 license = "Apache-2.0"
 description = "BeeAI Framework with bug fix for when retrieving datetime fields that don't have a dict attribute"
 readme = "README.md"
